@@ -1,29 +1,29 @@
-# pull the nginx image from repository as base image for creating new image from it 
+### pull the nginx image from repository as base image for creating new image from it 
 docker pull nginx 
 docker run -its -p 8080:8080 --name nginx-container nginx
 docker exec -it nginx-container bash 
 
-# make changes - configuration changes, content changes 
+### make changes - configuration changes, content changes 
 docker commit nginx-container manju1991/nginxserver
 
-# authenticate the docker repository server to push image 
+### authenticate the docker repository server to push image 
 docker login
 docker push manju1991/nginxserver 
 
-# Dockerfile 
+### Dockerfile 
 FROM manju1991/nginx
 COPY index.html /usr/share/nginx/html
 
 # Build image 
 docker build -t nginx-update .
 
-# create container 
+### create container 
 docker run -itd -p 8090:8080 --name nginx-container nginx-update
 
 docker images 
 docker ps -a 
 
-# to remove containers and images 
+### to remove containers and images 
 docker stop $(docker ps)
 dokcer rm $(docker ps -a -q)
 docker image prune -a

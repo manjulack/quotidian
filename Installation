@@ -1,0 +1,26 @@
+# Install Docker on Linux 
+sudo yum install docker -y
+sudo usermod -a -G docker ec2-user
+systemctl start docker
+systemctl status docker
+docker --version 
+docker images
+docker ps -a
+
+# Install Terrform on Linux 
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum -y install terraform
+terraform -version
+terraform -help
+touch ~/.bashrc
+terraform -install-autocomplete
+vi ~/.bashrc
+source ~/.bashrc
+mkdir learn-terraform-docker-container
+cd learn-terraform-docker-container
+vi main.tf
+[Terrform code to create the nginx service using docker]
+terraform init
+terraform apply
+

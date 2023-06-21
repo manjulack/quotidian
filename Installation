@@ -1,3 +1,4 @@
+
 # Install Docker on Linux 
 sudo yum install docker -y
 sudo usermod -a -G docker ec2-user
@@ -6,6 +7,11 @@ systemctl status docker
 docker --version 
 docker images
 docker ps -a
+
+# Docker install on Ubuntu 
+sudo apt-get install docker.io -y
+sudo usermod -a -G docker ec2-user
+systemctl status docker
 
 # Install Jenkins on Ubuntu 
 sudo apt update
@@ -19,7 +25,7 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update
 sudo apt-get install jenkins -y
 systemctl status jenkins 
-
+cat 
 # Jenkins run on port number 8080
 # To Check port
 netstat -tulpn 

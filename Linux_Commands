@@ -1,5 +1,14 @@
-alias c="clear"
+# shortcut 
 alias ls="ls -l"
+alias c="clear"
+alias n="netstat -tulpn"
 
+# remove file 
 rm -rfv jenkins.sh
+
+# find file in / directory 
+find / -name filename
+
+# to view the process running httpd 
+ps -ef | grep httpd 
 

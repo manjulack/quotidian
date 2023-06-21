@@ -7,7 +7,7 @@ docker --version
 docker images
 docker ps -a
 
-# On Ubuntu 
+# Install Jenkins on Ubuntu 
 sudo apt update
 sudo apt install openjdk-11-jre
 java -version
@@ -19,7 +19,6 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update
 sudo apt-get install jenkins
 systemctl status jenkins 
-
 
 # Install Terrform on Linux 
 sudo yum install -y yum-utils

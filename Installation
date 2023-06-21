@@ -20,6 +20,10 @@ sudo apt-get update
 sudo apt-get install jenkins -y
 systemctl status jenkins 
 
+# Jenkins run on port number 8080
+# To Check port
+netstat -tulpn 
+
 # Install Terrform on Linux 
 sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo

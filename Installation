@@ -10,7 +10,7 @@ docker ps -a
 
 # Docker install on Ubuntu 
 sudo apt-get install docker.io -y
-sudo usermod -a -G docker ec2-user
+sudo usermod -a -G docker $USER
 systemctl status docker
 
 # Install Jenkins on Ubuntu 

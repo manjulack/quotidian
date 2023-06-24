@@ -1,6 +1,6 @@
 # Pull the nginx image from repository as base image for creating new image from it 
 docker pull nginx 
-docker run -its -p 8080:8080 --name nginx-container nginx
+docker run -itd -p 8080:8080 --name nginx-container nginx
 docker exec -it nginx-container bash 
 
 # Make changes - configuration changes, content changes 
